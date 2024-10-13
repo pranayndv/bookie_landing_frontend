@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Work+Sans:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Work+Sans:ital,wght@0,350;1,350&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Work+Sans:ital,wght@0,500;1,500&display=swap');
+
+
+.brand {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .workSans {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+  }  
+  .workSan {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .none :focus{
+    outline: none;
+  }
+
+
+.text_Change{
+    font-size:14px !important;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #6f8b92 !important;
+}
+.css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root{
+    border-radius: 7px !important;
+}
+.css-dsvq4b-MuiAutocomplete-root .MuiOutlinedInput-root{
+    padding: 8px !important;
+}
+.css-klhpjd-MuiAutocomplete-root .MuiOutlinedInput-root .MuiAutocomplete-input {
+    padding: 0 0px 7.5px 5px !important;
+}
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+    font-size:14px !important;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #6f8b92 !important;
+}
+.css-klhpjd-MuiAutocomplete-root .MuiOutlinedInput-root {
+    padding: 7px !important;
+    margin-top: 8px !important;
+}
+.css-clttge-MuiAutocomplete-root .MuiOutlinedInput-root {
+    padding: 3px !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+

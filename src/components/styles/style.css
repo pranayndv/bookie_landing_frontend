@@ -1,0 +1,191 @@
+/* Shine */
+.hover14 figure {
+	position: relative;
+	display: inline-block;  /* Ensures it wraps around the img */
+
+	 /* Hides the shine effect overflow */
+	width: 100%;  /* Make the figure width responsive */
+	max-width: 100%; /* Prevents stretching beyond container */
+	height: auto;  /* Keeps aspect ratio */
+}
+
+.hover14 figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;  /* The width of the shine effect */
+	height: 100%;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+	transform: skewX(-25deg);
+	pointer-events: none;  /* Prevents blocking hover interaction */
+}
+
+.hover14 figure:hover::before {
+	animation: shine .75s;
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+.hover14 img {
+	position: relative;
+	display: block;
+	width: 100%;  /* Ensure the image takes up full width of its container */
+	height: auto;  /* Keeps the image aspect ratio */
+	max-width: 100%;  /* Prevents image from exceeding the container width */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .hover14 figure {
+    width: 100%;  /* On tablets or smaller, image is 100% width */
+  }
+}
+
+@media (max-width: 480px) {
+  .hover14 figure {
+    width: 100%;  /* On mobile, ensure it’s 100% width */
+  }
+}
+
+/* button */
+
+.button {
+	position: relative;
+	width: 120px;
+	height: 40px;
+	background-color: #000;
+	display: flex;
+	align-items: center;
+	color: white;
+	flex-direction: column;
+	justify-content: center;
+	border: none;
+	padding: 12px;
+	gap: 12px;
+	border-radius: 8px;
+	cursor: pointer;
+  }
+  
+  .button::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	left: -4px;
+	top: -1px;
+	margin: auto;
+	width: 128px;
+	height: 48px;
+	border-radius: 10px;
+	background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+	z-index: -10;
+	pointer-events: none;
+	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .button::after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+	transform: translate3d(0, 0, 0) scale(0.95);
+	filter: blur(20px);
+  }
+  
+  .button:hover::after {
+	filter: blur(30px);
+  }
+  
+  .button:hover::before {
+	transform: rotate(-180deg);
+  }
+  
+  .button:active::before {
+	scale: 0.7;
+  }
+  
+  /* input  */
+  /* From Uiverse.io by Maximinodotpy */ 
+.inputGroup {
+	font-family: 'Segoe UI', sans-serif;
+	margin: 1em 0 1em 0;
+	position: relative;
+  }
+  
+  .inputGroup input {
+	font-size: 100%;
+	padding: 0.8em;
+	outline: none;
+	border: 2px solid rgb(200, 200, 200);
+	background-color: transparent;
+	border-radius: 20px;
+  }
+  
+  .inputGroup label {
+	font-size: 100%;
+	position: absolute;
+	left: 0;
+	padding: 0.8em;
+	margin-left: 0.5em;
+	pointer-events: none;
+	transition: all 0.3s ease;
+	color: rgb(100, 100, 100);
+  }
+  
+  .inputGroup :is(input:focus, input:valid)~label {
+	transform: translateY(-50%) scale(.9);
+	margin: 0em;
+	margin-left: 1.3em;
+	padding: 0.4em;
+	background-color: white;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+	border-color: rgb(150, 150, 200);
+  }
+
+
+
+  /* text animation  */
+
+/* src/ShiningChromeText.css */
+
+.shine, .chrome {
+	margin: 0 auto;
+	margin-bottom: 1em;
+	font-weight: bold;
+	color: black; /* Set text color to black */
+	position: relative;
+	overflow: hidden; /* Prevent overflow for the shine effect */
+  }
+  
+  .shine::before, .chrome::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%; /* Start partially off-screen */
+	width: 50%; /* Width of the shine effect */
+	height: 100%; /* Full height of the text */
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+	animation: shine 4s infinite; /* Slowed down animation */
+  }
+  
+  @keyframes shine {
+	0% {
+	  left: -50%; /* Start position off-screen left */
+	}
+	50% {
+	  left: 100%; /* End position off-screen right */
+	}
+	100% {
+	  left: 100%; /* Stay off-screen right */
+	}
+  }
+  
